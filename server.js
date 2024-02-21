@@ -14,11 +14,8 @@ app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "client", "build")))
 mongoose.set("strictQuery", true);
 
-//vj45C3PrNiZj5s7l
-//mongodb+srv://edurojas1212:<password>@cluster0.1gyzgca.mongodb.net/
-
 mongoose.connect(
-  "mongodb+srv://edurojas1212:vj45C3PrNiZj5s7l@cluster0.1gyzgca.mongodb.net/",
+  process.env.MONGO_URI,
   (err) => {
     if (err) {
       console.log('MongoDB connection error:', err);
