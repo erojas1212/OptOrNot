@@ -64,7 +64,6 @@ export default function CategoryOptions() {
 };
 
 useEffect(() => {
-  // Fetch options for the selected category
   userAxios
     .get(`/api/questions/category/${category}`)
     .then((response) => setQuestions(response.data))
@@ -89,6 +88,7 @@ useEffect(() => {
             {questions[currentQuestionIndex].optionA}
           </h3>
           {displayResults && <h2 className="percentageA">{Math.round(totalPercentageOptionA)}%</h2>}
+          <h3 className="or">OR</h3> {/* Add the OR text here */}
           <h3
             className="onClickB"
             onClick={() => handleOptionsClick( "optionB")}
@@ -98,7 +98,9 @@ useEffect(() => {
         {displayResults && <h2 className="percentageB">{Math.round(totalPercentageOptionB)}%</h2>}
         </div>
       )}
-      <button className="nextBtn" onClick={handleNextQuestion}>Next Question</button>
+      {!allQuestionsAnswered && (
+        <button className="nextBtn" onClick={handleNextQuestion}>Next Question</button>
+      )}
       {allQuestionsAnswered && (
         <button className="backBtn" onClick={handleNavigateProfile}>Back to Categories</button>
       )}

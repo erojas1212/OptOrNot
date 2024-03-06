@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
@@ -21,7 +21,7 @@ body {
   font-size: 28px;
   text-align: center;
   margin-bottom: 20px;
-color: #fff;
+  color: #fff;
 }
 
 form {
@@ -70,8 +70,6 @@ input {
   text-align: center;
 }
 
-
-
 .navbar {
   background-color: #3453db;
   padding: 10px;
@@ -92,7 +90,7 @@ input {
 /* PROFILE PAGE */
 body::before {
   content: "";
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -101,11 +99,10 @@ body::before {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.8;
-  z-index: -1; /* Ensure the pseudo-element is behind other content */
-
+  z-index: -1;
 }
 
-.profile-page{
+.profile-page {
   max-width: 600px;
   margin: 100px auto;
   padding: 80px;
@@ -128,7 +125,6 @@ body::before {
   background-color: #e74c3c;
 }
 
-
 ul {
   list-style: none;
   padding: 0;
@@ -140,7 +136,7 @@ ul li {
 
 ul li a {
   text-decoration: none;
-  background-color: #ffffff9e;
+  background-color: #ffffff0c;
   border-radius: 10px;
   padding: 2px;
   color: #204fe9;
@@ -153,8 +149,6 @@ ul li a:hover {
   color: #e74c3c;
 }
 
-
-
 .Category {
   font-size: 24px;
   margin-bottom: 10px;
@@ -166,27 +160,25 @@ ul li a:hover {
   font-size: 22px;
 }
 
-.wouldYou-container{
+.wouldYou-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 .wouldYou {
-font-size: 50px;
-margin-bottom: 40px;
- text-align: center;
- background: linear-gradient(to right, #3498db, #e74c3c);
- max-width: 600px;
- margin: auto;
- padding: 20px;
- color: #e7e9ee;
- border: 1px solid #ddd;
- border-radius: 10px;
-
+  font-size: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+  background: linear-gradient(to right, #3498db, #e74c3c);
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  color: #e7e9ee;
+  border: 1px solid #ddd;
+  border-radius: 10px;
 }
 
-.onClickA{
+.onClickA {
   margin-top: 40px;
   background-color: #204fe9;
   color: #ffffff;
@@ -199,6 +191,14 @@ margin-bottom: 40px;
   align-items: center;
   justify-content: center;
   padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+  border: 1px solid #8b8b8b;
+}
+
+.or {
+  color: white;
+  text-align: center;
+  font-size: 1.7rem;
 }
 
 .onClickB {
@@ -213,7 +213,8 @@ margin-bottom: 40px;
   align-items: center;
   justify-content: center;
   padding: 10px;
-
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+  border: 1px solid #8b8b8b;
 }
 
 .percentageA {
@@ -256,4 +257,36 @@ margin-bottom: 40px;
 
 .backBtn {
   background-color: #e74c3c;
+}
+
+@media only screen and (max-width: 880px) {
+
+  .category-selected {
+    font-size: 14px;
+  }
+
+  .onClickA,
+  .onClickB {
+    font-size: 12px;
+  }
+  .or {
+    font-size: 20px;
+  }
+
+  .wouldYou {
+    font-size: 18px;
+  }
+
+  .percentageA,
+  .percentageB {
+    font-size: 12px;
+    max-width: 400px;
+    height: 60px;
+  }
+
+  .nextBtn,
+.backBtn {
+  font-size: 10px;
+}
+
 }
